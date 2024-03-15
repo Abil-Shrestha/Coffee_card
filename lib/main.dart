@@ -8,7 +8,16 @@ void main() {
           backgroundColor: Colors.grey[400],
           centerTitle: true,
         ),
-        body: const Text('Hello, guys! whats up'),
-        backgroundColor: Colors.pink[100]),
+        body: const Home(),
+        backgroundColor: Colors.red[100]),
   ));
+}
+
+class Home extends StatelessWidget {
+  const Home({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Text('Hello mfs');
+  }
 }
