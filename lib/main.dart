@@ -8,7 +8,7 @@ void main() {
           backgroundColor: Colors.grey[400],
           centerTitle: true,
         ),
-        body: const Text('Hello, mfs! whats up'),
+        body: const Text('Hello, guys! whats up'),
         backgroundColor: Colors.pink[100]),
   ));
 }
