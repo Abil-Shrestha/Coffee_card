@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -18,6 +19,18 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text('Hello mfs');
+    return Container(
+        // width: 200,
+        // height: 100,
+        padding: const EdgeInsets.all(20),
+        margin: const EdgeInsets.fromLTRB(40, 40, 0, 0),
+        color: Colors.orange[400],
+        child: const Text("Hey ninjas",
+            style: TextStyle(
+              fontSize: 30,
+              letterSpacing: 4,
+              decoration: TextDecoration.underline,
+              fontStyle: FontStyle.italic,
+            )));
   }
 }
