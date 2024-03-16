@@ -17,9 +17,9 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
   }
 
   void increaseSugars() {
-  setState((){
-    sugars = sugars < 5 ? sugars + 1 : 0;
-  });
+    setState(() {
+      sugars = sugars < 5 ? sugars + 1 : 0;
+    });
   }
 
   @override
@@ -27,13 +27,13 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
     return Column(children: [
       Row(children: [
         const Text('Strength: '),
-        Text('$strength'),
-        Image.asset(
-          'assets/img/coffee_bean.png',
-          width: 25,
-          color: Colors.brown[100],
-          colorBlendMode: BlendMode.multiply,
-        ),
+        for (int i = 0; i < strength; i++)
+          Image.asset(
+            'assets/img/coffee_bean.png',
+            width: 25,
+            color: Colors.brown[100],
+            colorBlendMode: BlendMode.multiply,
+          ),
         const Expanded(child: SizedBox()),
         FilledButton(
             style: FilledButton.styleFrom(
@@ -45,13 +45,14 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
       ]),
       Row(children: [
         const Text('Sugars: '),
-        Text('$sugars'),
-        Image.asset(
-          'assets/img/sugar_cube.png',
-          width: 25,
-          color: Colors.brown[100],
-          colorBlendMode: BlendMode.multiply,
-        ),
+        if (sugars == 0) const Text('No sugah ??'),
+        for (int i = 0; i < sugars; i++)
+          Image.asset(
+            'assets/img/sugar_cube.png',
+            width: 25,
+            color: Colors.brown[100],
+            colorBlendMode: BlendMode.multiply,
+          ),
         const Expanded(child: SizedBox()),
         FilledButton(
             style: FilledButton.styleFrom(
